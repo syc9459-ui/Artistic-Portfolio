@@ -18,6 +18,8 @@ var poem = [
   ["When you lay each night, the Moissanite in sight.", "Its the girl that got away, who keeps you up at night."]
 ];
 
+
+
 var poemBody = document.getElementById('poem-body');
 poem.forEach(function(stanza) {
   var stanzaEl = document.createElement('div');
@@ -86,13 +88,3 @@ function startDots() {
     drawDots(canvas, (e.clientX - r.left) * (canvas.width / r.width), (e.clientY - r.top) * (canvas.height / r.height), true);
   });
 }
-
-// secret music
-var btn = document.getElementById('secret-btn');
-var aud = document.getElementById('hozier-audio');
-var playing = false;
-btn.addEventListener('click', function() {
-  playing = !playing;
-  if (playing) { aud.play(); btn.classList.add('playing'); }
-  else { aud.pause(); btn.classList.remove('playing'); }
-});
