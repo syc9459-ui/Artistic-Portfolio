@@ -1,4 +1,4 @@
-// BUBBLES THAT FALL WHEN YOU CLICK SAVANNAH CRAWFORD
+
 
 let bubbles = [];
 let animating = false;
@@ -7,7 +7,7 @@ function launchBubbles(callback) {
   animating = true;
   bubbles = [];
 
-  // CREATE 40 BUBBLES ACROSS THE SCREEN
+
   for (let i = 0; i < 40; i++) {
     bubbles.push({
       x: Math.random() * window.innerWidth,
@@ -20,7 +20,7 @@ function launchBubbles(callback) {
     });
   }
 
-  // CREATE A CANVAS JUST FOR BUBBLES
+ 
   let canvas = document.getElementById('bubble-canvas');
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
@@ -47,7 +47,7 @@ function launchBubbles(callback) {
       ctx.lineWidth = 1.5;
       ctx.stroke();
 
-      // SHINY GLARE ON EACH BUBBLE
+     
       ctx.beginPath();
       ctx.arc(b.x - b.size * 0.3, b.y - b.size * 0.3, b.size * 0.2, 0, Math.PI * 2);
       ctx.fillStyle = `rgba(255, 255, 255, 0.35)`;
@@ -57,7 +57,7 @@ function launchBubbles(callback) {
     if (elapsed < duration) {
       requestAnimationFrame(animate);
     } else {
-      // ANIMATION DONE — HIDE CANVAS AND GO TO PAGE
+      
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       canvas.style.display = 'none';
       animating = false;
