@@ -1,0 +1,141 @@
+<!--Page 2-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>digital portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital@0;1&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="p2-wrap">
+
+  <a href="index.html" class="back-btn">← back</a>
+
+  <nav class="project-nav">
+    <button class="nav-thumb active" onclick="openProject(1)">
+      <span class="thumb-num">01</span>
+      <span class="thumb-name">Hozier Magazine</span>
+    </button>
+    <button class="nav-thumb" onclick="openProject(2)">
+      <span class="thumb-num">02</span>
+      <span class="thumb-name">Timewasterz</span>
+    </button>
+    <button class="nav-thumb" onclick="openProject(3)">
+      <span class="thumb-num">03</span>
+      <span class="thumb-name">Podcast</span>
+    </button>
+    <button class="nav-thumb" onclick="openProject(4)">
+      <span class="thumb-num">04</span>
+      <span class="thumb-name">Poetry</span>
+    </button>
+    <button class="nav-thumb" onclick="openProject(5)">
+      <span class="thumb-num">05</span>
+      <span class="thumb-name">Colorful Dots</span>
+    </button>
+  </nav>
+
+  <!-- PROJECT 1 -->
+  <div class="project-content active" id="project-1">
+    <div class="pdf-side">
+      <object data="PrintMagazine_SavannahCrawford_.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH" type="application/pdf" width="100%" height="100%"></object>
+    </div>
+    <div class="text-side">
+      <span class="project-tag">01 · Visual Studio Foundation</span>
+      <h2 class="project-title">Rolling Stone<br>Magazine</h2>
+      <p class="project-desc">
+        This project was my very first introduction to using InDesign my first semester of college.
+        The goal was to create a magazine of any musical artist — I adore Hozier's
+        music, so I chose him as my subject.<br><br>
+        Although I was proud of the outcome for this assignment, I am working on
+        transforming this typical PDF into an interactive piece — adding hidden music,
+        funny/factual pop-ups, and more. I hope to do this soon!
+      </p>
+    </div>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-content" id="project-2">
+    <div class="tw-photos">
+      <img src="IMG_5601.jpeg" alt="Timewasterz box">
+      <img src="IMG_5599.jpeg" alt="Timewasterz circuit">
+      <img src="IMG_5617.jpeg" alt="Timewasterz LEDs">
+    </div>
+    <div class="text-side" style="justify-content:flex-start;">
+      <span class="project-tag">02 · IDM Final Project</span>
+      <h2 class="project-title">Timewasterz</h2>
+      <p class="project-desc">
+        Timewasterz started in October 2025, when my friend Riley first coded the game in p5.js as a fun experiment. For our IDM final, we were challenged to create a physical product for a dystopian, futuristic society and we knew immediately we wanted to bring Timewasterz into the real world. Riley, myself, and another friend spent two months transforming it from a digital sketch into a fully tangible, hand-built game.<br><br>
+        The game works by clicking a lit-up LED light. Once clicked, an animation plays and you have to react quickly to hit the blue light. Survive three levels and you win. To build it, we used an Arduino to power the LED lights and handle the button inputs, connecting everything through a breadboard and writing the logic in code. It was my very first time working with Arduino, and I completely fell in love with the process. There is something so satisfying about bridging the gap between code and something you can physically hold and interact with. I hope to keep incorporating hardware and Arduino into my future projects!<br><br>
+        <a href="https://rjs9450-svg.github.io/TimeWasterz/" target="_blank" class="tw-link">play the digital version ↗</a>
+      </p>
+    </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project-content" id="project-3">
+    <div class="pod-img-side">
+      <img src="reaper_file.png" alt="Podcast editing in Reaper">
+    </div>
+    <div class="text-side">
+      <span class="project-tag">03 · Podcast</span>
+      <h2 class="project-title">Podcast</h2>
+      <p class="project-desc">
+        This podcast was my second major assignment for my Audio Foundation course during my first semester of college. Throughout the course, we learned how to record and edit audio using Reaper, a software that was completely new to me at the time, having only used GarageBand to edit my own music before.<br><br>
+        The assignment spanned two weeks, during which we had to write, record, and edit an original podcast that ran at least five minutes long. It was definitely a challenge because we were still finding our footing in the semester, but I had so much fun navigating Reaper and discovered a real love for the editing process. I took a lot away from this project and plan on using Reaper to record and produce my own music in the future!
+      </p>
+      <div class="audio-block">
+        <p class="audio-label">listen</p>
+        <audio controls>
+          <source src="crawford_savannah_podcast.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+  </div>
+
+  <!-- PROJECT 4 -->
+  <div class="project-content" id="project-4">
+    <div class="poem-side">
+      <h2 class="project-title">Humbert</h2>
+      <div class="poem-body" id="poem-body"></div>
+    </div>
+    <div class="text-side" style="justify-content:flex-start;">
+      <span class="project-tag">04 · Poetry</span>
+      <h2 class="project-title">Poetry</h2>
+      <p class="project-desc">
+        Humbert is a poem I wrote after finishing Nabokov's <em>Lolita</em>. The story connected with me deeply on a personal level, and I found myself needing to pour everything onto the page. I sat down with my notebook and let it all out, and the result was this poem, which I hold very close to my heart. I started writing poetry and creative stories from a very young age and this piece is my personal favorite. <br><br>
+        This piece weaves together the narrative of Lolita itself and my own personal experience. It is written as a direct message to Humbert, the protagonist and narrator of the novel, and everything he represents. Writing this was a cathartic and emotional process, and sharing it here feels like an important step in owning that story.
+      </p>
+    </div>
+  </div>
+
+  <!-- PROJECT 5 -->
+  <div class="project-content" id="project-5">
+    <div class="dots-side">
+      <canvas id="dots-canvas"></canvas>
+    </div>
+    <div class="text-side">
+      <span class="project-tag">05 · p5.js Sketch</span>
+      <h2 class="project-title">Colorful Dots</h2>
+      <p class="project-desc">
+        This project first started in my Creative Coding class during my first semester of college. I was completely new to coding at the time, and it was a challenge to create visually interesting work without yet having a strong technical foundation. Despite that, I worked really hard to develop my skills and discovered a genuine passion for creative coding that has only grown since.<br><br>
+I originally completed this as a mini project, but ended up expanding it on my own by adding a mouseIsPressed function, which allows colors to be randomly generated and drag across the grid, staying locked into each square. 
+Since then, my web and coding skills have drastically improved. I am currently enrolled in two programming/web courses and am actively learning Python, HTML, CSS, and JavaScript. 
+
+        <br><br>
+        <span style="font-size:0.8rem; color:rgba(255,255,255,0.5); font-style:italic;">
+          click and drag on the grid to paint with color.
+        </span>
+      </p>
+    </div>
+  </div>
+
+</div>
+
+<button id="secret-btn"></button>
+<audio id="hozier-audio" src="hozier_.mp4" loop></audio>
+<script src="cursor.js"></script>
+<script src="page2.js"></script>
+
+</body>
+</html>

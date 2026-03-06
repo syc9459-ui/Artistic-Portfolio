@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>savannah crawford</title>
+  <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+  <link rel="stylesheet" href="waves.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="waves.js" defer></script>
+  <script src="bubbles.js" defer></script>
+  <script src="inkdrop.js" defer></script>
+  <script src="stars.js" defer></script>
+  <style>
+  
+    body { width: 100vw; height: 100vh; }
+  </style>
+</head>
+<body>
+
+  <canvas id="bubble-canvas"></canvas>
+
+  <div id="home" class="page active">
+    <div class="content-wrap">
+      <button class="menu-item" onclick="launchBubbles(() => window.location.href='page_1.html')">
+        savannah crawford
+      </button>
+      <button class="menu-item" onclick="launchInk(() => window.location.href='page_2.html')">
+        digital portfolio
+      </button>
+      <button class="menu-item" onclick="launchStars(() => window.location.href='page_3.html')">
+        runaway cat
+      </button>
+    </div>
+  </div>
+
+  <script src="cursor.js"></script>
+</body>
+</html>
