@@ -1,4 +1,4 @@
-// STARS THAT SHOOT OUTWARD LIKE WARPING INTO SPACE
+
 
 function launchStars(callback) {
   let canvas = document.getElementById('bubble-canvas');
@@ -14,7 +14,7 @@ function launchStars(callback) {
   let centerX = window.innerWidth / 2;
   let centerY = window.innerHeight / 2;
 
-  // CREATE STARS THAT ALL START FROM THE CENTER
+  
   for (let i = 0; i < 120; i++) {
     let angle = Math.random() * Math.PI * 2;
     let speed = Math.random() * 12 + 4;
@@ -33,7 +33,9 @@ function launchStars(callback) {
     if (!startTime) startTime = timestamp;
     let elapsed = timestamp - startTime;
 
-    // DARK FADE TRAIL SO STARS LOOK LIKE THEY'RE SHOOTING
+
+
+    
     ctx.fillStyle = 'rgba(168, 196, 184, 0.25)';
     ctx.fillRect(0, 0, canvas.width, canvas.height);
 
@@ -42,7 +44,7 @@ function launchStars(callback) {
       star.y += Math.sin(star.angle) * star.speed;
       star.speed += 0.4; // ACCELERATE over time
 
-      // DRAW STAR AS A STRETCHED LINE (shooting effect)
+    
       let tailX = star.x - Math.cos(star.angle) * star.length * (star.speed * 0.4);
       let tailY = star.y - Math.sin(star.angle) * star.length * (star.speed * 0.4);
 
